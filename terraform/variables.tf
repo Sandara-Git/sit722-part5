@@ -1,7 +1,7 @@
 # Sets global variables for this Terraform project.
 
 variable app_name {
-  default = "sit722sandara"
+  default = "sit722sandara1"
 }
 
 variable container_registry {
