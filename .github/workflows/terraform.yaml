@@ -34,8 +34,10 @@ jobs:
       run: terraform init
       working-directory: ./terraform
 
-    - name: Initialize Terraform
-      run: terraform init
+    - name: Terraform Import
+        run: |
+          terraform import azurerm_resource_group.sit722sandara1 /subscriptions/973092b1-c341-496d-92fa-b8731afbd6e4/resourceGroups/sit722sandara1 || true
+
       working-directory: ./terraform
 
     # Apply Terraform changes (create container registry, Kubernetes cluster, etc.)
