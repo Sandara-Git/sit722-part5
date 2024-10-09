@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: inventory-management
-        image: sit722sandara.azurecr.io/inventory_management:latest
+        image: $CONTAINER_REGISTRY/inventory_management:$VERSION
         ports:
         - containerPort: 8001
         env:
