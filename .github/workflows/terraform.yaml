@@ -32,6 +32,7 @@ jobs:
     # Initialize Terraform
     - name: Terraform Init
       run: terraform init
+      working-directory: ./terraform
 
     - name: Initialize Terraform
       run: terraform init
@@ -41,6 +42,7 @@ jobs:
     - name: Terraform Apply
       id: apply
       run: terraform apply -auto-approve
+      working-directory: ./terraform
 
     # Output the resources created
     - name: Terraform Output
