@@ -33,6 +33,10 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Initialize Terraform
+      run: terraform init
+      working-directory: ./terraform
+
     # Apply Terraform changes (create container registry, Kubernetes cluster, etc.)
     - name: Terraform Apply
       id: apply
